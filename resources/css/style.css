@@ -1,0 +1,638 @@
+/* ---------------------------------------- */
+/* BASIC SETUP */
+/* ---------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ffffff;
+  color: #555555;
+  font-family: "Lato", "Arial", "sans-serif";
+  font-size: 20px;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* ---------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ---------------------------------------- */
+
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 80px 0px;
+}
+
+.box {
+  padding: 1%;
+  float: left;
+}
+
+/* HEADINGS */
+
+h1,
+h2,
+h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 200%;
+  word-spacing: 4px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 160%;
+  word-spacing: 2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2:after {
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+h3 {
+  font-size: 110%;
+  margin-bottom: 15px;
+}
+
+/* PARAGRAPHS */
+
+.feature-caption {
+  width: 70%;
+  margin-left: 15%;
+  line-height: 145%;
+}
+
+.box p {
+  font-size: 90%;
+  line-height: 145%;
+}
+
+.customer {
+  max-width: 200%;
+  padding: 10px;
+}
+
+.cust-image {
+  max-width: 20%;
+  text-align: center;
+}
+
+/* ICONS */
+
+.icon {
+  color: #e67e22;
+  display: block;
+  font-size: 3vw;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  font-size: 120%;
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #e67e22;
+  line-height: 120%;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
+/* LINKS */
+a:link,
+a:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid #e67e22;
+  transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+  color: #555555;
+  border-bottom: 1px solid transparent;
+}
+
+/* BUTTONS */
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn-full:hover,
+.btn-full:active {
+  border: 1px solid #f7a65f;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+  border: 1px solid #f7a65f;
+  color: #fff;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #f7a65f;
+}
+
+/* ---------------------------------------- */
+/* HEADER COMPONENTS */
+/* ---------------------------------------- */
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("images/hero.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
+}
+
+.main-nav {
+  float: right;
+  list-style: none;
+  margin-top: 55px;
+}
+
+.main-nav li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s;
+  padding: 8px 0px;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid #f7a65f;
+}
+
+/* ---------------------------------------- */
+/* MEALS */
+/* ---------------------------------------- */
+.section-meals {
+  padding: 0;
+}
+
+.meals-showcase {
+  list-style: none;
+  width: 100%;
+}
+
+.meals-showcase li {
+  display: block;
+  float: left;
+  width: 25%;
+}
+
+.meal-photo {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.meal-photo img {
+  width: 100%;
+  height: auto;
+  transform: scale(1.15);
+  transition: transform 0.5s;
+  opacity: 0.7;
+}
+
+.meal-photo img:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* ---------------------------------------- */
+/* HOW IT WORKS */
+/* ---------------------------------------- */
+.steps-box {
+  margin-top: 30px;
+}
+
+.steps-box:first-child {
+  text-align: right;
+  padding-right: 3%;
+}
+
+.steps-box:last-child {
+  padding-left: 3%;
+  margin-top: 70px;
+}
+
+.app-screen {
+  width: 40%;
+}
+
+.work-step {
+  margin-bottom: 50px;
+}
+
+.work-step:last-of-type {
+  margin-bottom: 80px;
+}
+
+.work-step div {
+  color: #e67e22;
+  border: 2px solid #e67e22;
+  display: inline-block;
+  border-radius: 50%;
+  height: 4vw;
+  width: 4vw;
+  text-align: center;
+  padding: 5px;
+  float: left;
+  font-size: 150%;
+  margin-right: 25px;
+}
+
+.app-button img {
+  height: 8vw;
+  width: 6vw;
+  margin-right: 10px;
+}
+
+.section-steps {
+  background-color: #eeeeee;
+  margin-top: 0;
+}
+
+/* ---------------------------------------- */
+/* CITIES */
+/* ---------------------------------------- */
+.box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.city-feature {
+  margin-bottom: 5px;
+}
+
+/* ---------------------------------------- */
+/* TESTMONIALS */
+/* ---------------------------------------- */
+.section-testimonials {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("images/back-customers.jpg");
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
+}
+
+blockquote {
+  padding: 2%;
+  line-height: 145%;
+  font-style: italic;
+  position: relative;
+  margin-top: 40px;
+}
+
+blockquote:before {
+  content: "\201C";
+  font-size: 400%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+}
+
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* ---------------------------------------- */
+/* PLANS */
+/* ---------------------------------------- */
+
+.section-plans {
+  background-color: #eeeeee;
+  width: 100%;
+}
+
+.plan-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.plan-box div {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price {
+  font-size: 300%;
+  margin-bottom: 10px;
+  color: #e67e22;
+  font-weight: 100;
+}
+
+.plan-price span {
+  font-size: 30%;
+  font-weight: 300;
+}
+
+.plan-price-meal {
+  font-size: 80%;
+}
+
+.plan-box ul {
+  list-style: none;
+}
+
+.plan-box ul li {
+  padding: 5px;
+}
+
+.plan-box div:last-child {
+  text-align: center;
+}
+
+.plan-box div:first-child {
+  background-color: rgba(252, 252, 252, 0.7);
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+
+/* ---------------------------------------- */
+/* FEEDBACK */
+/* ---------------------------------------- */
+
+form {
+  padding: 2%;
+  background-color: rgb(236, 229, 229);
+  width: 40%;
+  margin-left: 30%;
+  border-radius: 10px;
+}
+
+form div,
+label,
+p {
+  padding: 2%;
+  margin: 1%;
+  color: rgb(139, 136, 136);
+  font-weight: 400;
+  width: 100%;
+}
+
+form input,
+select,
+textarea {
+  padding: 3%;
+  border-style: none;
+  border-radius: 5px;
+  width: 100%;
+  background-color: #fff;
+}
+
+form input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #e67e22;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 5%;
+  height: 5%;
+  margin-left: 5%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 2%;
+  border-style: none;
+  background-color: rgb(250, 245, 245);
+}
+
+form a {
+  margin-left: 30%;
+}
+
+/* ---------------------------------------- */
+/* FOOTER */
+/* ---------------------------------------- */
+.section-footer li {
+  color: #555555;
+  list-style: none;
+  float: left;
+  padding: 3%;
+  font-size: 150%;
+}
+
+.section-footer li a {
+  text-decoration: none;
+  color: #555;
+  transition: font-weight 0.3s;
+}
+
+.section-footer li a:hover {
+  color: #e67e22;
+  font-weight: 400;
+}
+
+.section-footer {
+  margin-left: 20%;
+  margin-bottom: 20%;
+  padding-top: 5%;
+  height: auto;
+}
+
+footer {
+  background-color: rgb(240, 234, 234);
+}
+
+/* ---------------------------------------- */
+/* RESPONSIVE */
+/* ---------------------------------------- */
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 90%;
+  }
+
+  header img {
+    width: 100%;
+  }
+
+  .main-nav {
+    width: 40%;
+    margin-top: 10px;
+  }
+
+  .meals-showcase li {
+    width: 100%;
+    float: right;
+  }
+
+  .app-screen {
+    width: 90%;
+  }
+
+  .city-class img {
+    width: 100%;
+  }
+
+  .steps-box a img {
+    width: 80px;
+    height: auto;
+  }
+
+  .work-step div {
+    width: 10%;
+    height: auto;
+  }
+
+  form {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .btn-full {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .meals-showcase li {
+    width: 50%;
+    float: right;
+  }
+
+  .steps-box a img {
+    width: 40%;
+  }
+
+  .city-class img {
+    width: 90%;
+  }
+
+  .work-step div {
+    width: 9%;
+    height: 5%;
+  }
+
+  .app-screen {
+    width: 50%;
+    margin-top: 18%;
+  }
+
+  .btn-full {
+    margin-bottom: 20px;
+  }
+  .section-footer {
+    width: 90%;
+    padding-bottom: 3%;
+    margin: 0px;
+    margin-left: 3%;
+  }
+  .section-footer li {
+    padding-bottom: 20%;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .meals-showcase li {
+    width: 25%;
+    float: right;
+  }
+
+  .app-screen {
+    width: 60%;
+    margin-top: -3%;
+  }
+
+  .btn-full {
+    margin-bottom: 20px;
+  }
+  .work-step div {
+    width: 10%;
+    height: 5%;
+  }
+}
